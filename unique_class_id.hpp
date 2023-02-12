@@ -28,7 +28,7 @@ namespace unique_class_id {
 	template<class T1, class T2>
 	bool is_same_class(T2 *second) {
 		static const class_id_t id1 = get_class_id<T1>();
-		class_id_t = second->id();
+		class_id_t id2 = second->id();
 		return id1 == id2;
 	}
 }
