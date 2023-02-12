@@ -33,7 +33,7 @@ namespace unique_class_id {
 	}
 }
 
-#define GENERATE_UNIQUE_CLASS_ID(T)			\
+#define DEFINE_UNIQUE_CLASS_ID(T)			\
 public:							\
 virtual unique_class_id::class_id_t id() {		\
 	static const unique_class_id::class_id_t id =	\
