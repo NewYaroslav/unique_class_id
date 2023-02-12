@@ -12,11 +12,11 @@ An example of using the library is shown below:
 #include "unique_class_id.hpp"
 
 class A {
-    GENERATE_UNIQUE_CLASS_ID(A)
+    DEFINE_UNIQUE_CLASS_ID(A)
 };
 
 class B : public A {
-    GENERATE_UNIQUE_CLASS_ID(B)
+    DEFINE_UNIQUE_CLASS_ID(B)
 };
 
 class Base {
@@ -25,11 +25,11 @@ public:
 };
 
 class DerivedA : public Base {
-    GENERATE_UNIQUE_CLASS_ID(DerivedA)
+    DEFINE_UNIQUE_CLASS_ID(DerivedA)
 };
 
 class DerivedB : public Base {
-    GENERATE_UNIQUE_CLASS_ID(DerivedB)
+    DEFINE_UNIQUE_CLASS_ID(DerivedB)
 };
 
 int main() {
