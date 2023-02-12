@@ -33,12 +33,12 @@ namespace unique_class_id {
 	}
 }
 
-#define DEFINE_UNIQUE_CLASS_ID(T)			\
-public:							\
-virtual unique_class_id::class_id_t id() {		\
-	static const unique_class_id::class_id_t id =	\
-		unique_class_id::get_class_id<T>();	\
-	return id;					\
+#define DEFINE_UNIQUE_CLASS_ID(T)                       \
+public:                                                 \
+virtual unique_class_id::class_id_t id() const {        \
+    static const unique_class_id::class_id_t id =       \
+        unique_class_id::get_class_id<T>();             \
+    return id;                                          \
 }
 
 #endif // _UNIQUE_CLASS_ID_HPP_INCLUDED
