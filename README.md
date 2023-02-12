@@ -21,7 +21,7 @@ class B : public A {
 
 class Base {
 public:
-    virtual unique_class_id::class_id_t id() = 0;
+    virtual unique_class_id::class_id_t id() const = 0;
 };
 
 class DerivedA : public Base {
