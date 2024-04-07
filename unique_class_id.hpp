@@ -12,7 +12,7 @@ namespace unique_class_id {
 		class_id_t djb2_hash(const char *str) {
 			std::uint32_t hash	= 5381;
 			int c = 0;
-			while (c = *str++) {
+			while ((c = *str++)) {
 				hash = ((hash  << 5) + hash) + c;
 			}
 			return static_cast<class_id_t>(hash);
