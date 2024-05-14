@@ -9,6 +9,7 @@ To use the library, simply include the header "unique_class_id.hpp" in your code
 An example of using the library is shown below:
 
 ```cpp
+#include <iostream>
 #include "unique_class_id.hpp"
 
 class A {
@@ -25,11 +26,11 @@ public:
 };
 
 class DerivedA : public Base {
-    DEFINE_UNIQUE_CLASS_ID(DerivedA)
+    DEFINE_FINAL_UNIQUE_CLASS_ID(DerivedA)
 };
 
 class DerivedB : public Base {
-    DEFINE_UNIQUE_CLASS_ID(DerivedB)
+    DEFINE_FINAL_UNIQUE_CLASS_ID(DerivedB)
 };
 
 int main() {
@@ -53,6 +54,9 @@ int main() {
         std::cout << "Base pointer is pointing to DerivedB\n";
     }
 
+	delete a;
+	delete b;
+	delete base_ptr;
     return 0;
 }
 ```
